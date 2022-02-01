@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
+    "dev": "nodemon index.js",
     "lint": "./node_modules/.bin/eslint"
   },
   "repository": {
@@ -24,6 +25,8 @@
   },
   "homepage": "https://github.com/mbanda1/battle-simulator-API#readme",
   "dependencies": {
+    "db-migrate": "^0.11.13",
+    "db-migrate-pg": "^1.2.2",
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
     "pg": "^8.7.1"
