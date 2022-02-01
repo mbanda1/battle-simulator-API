@@ -1,0 +1,39 @@
+{
+  "name": "battle-simulator",
+  "version": "1.0.0",
+  "description": "armies in a battle parsuit",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "lint": "./node_modules/.bin/eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbanda1/battle-simulator-API.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "reactjs",
+    "postgresQl"
+  ],
+  "author": "mbanda1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbanda1/battle-simulator-API/issues"
+  },
+  "homepage": "https://github.com/mbanda1/battle-simulator-API#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
+  }
+}
