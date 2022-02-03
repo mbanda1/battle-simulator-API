@@ -2,8 +2,8 @@ CREATE TABLE public.armies
 (
     _id SERIAL PRIMARY KEY UNIQUE,
     name character varying(255) NOT NULL UNIQUE,
-    units int not null,
-    check(units >= 80 and units <= 100) DEFAULT 80,
+    units int not null DEFAULT 80,
+    check(units >= 80 and units <= 100),
     battleId bigint NOT NULL,
     attackStrategyId bigint NOT NULL,
     created_at TIMESTAMPTZ DEFAULT NOW() ,
