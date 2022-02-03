@@ -129,7 +129,7 @@ module.exports = class BattleService {
 			}
 
 			await updateGameResults(lastState, getBattleClusters);
-			return true;
+			return 'Check Logs / Database for  final results status';
 		} catch (error) {
 			console.log({ error });
 			throw error;
