@@ -1,30 +1,16 @@
 require('dotenv').config();
-
-const express = require('express');
-const cors = require('cors');
 const configs = require('./config/envroment-variables.json');
-const errorHandler = require('./middleware/errorHandler');
-const errors = require('./errors');
-const routes = require('./routes');
 
-const app = express();
+const express = require('./app');
+const server = require('./httpClinet');
+require('./socketIo');
 
-const jsonParser = express.json();
-const corsMiddleware = cors();
+server.on('request', express);
 
-app.use(corsMiddleware);
-app.use(jsonParser);
-
-app.get('/', (req, res) => {
-	res.send('Hello World!');
+server.listen(configs.port, () => {
+	console.log(`Battle Simulator listening on port ${configs.port}`);
 });
 
-app.use(routes);
-
-app.use(errorHandler.internalServerErrorHandler(errors));
-app.use(errorHandler.missingRouteErrorHandler(errors));
-app.use(errorHandler.conflictErrorHandler(errors));
-
-app.listen(configs.port, () => {
-	console.log(`Example app listening on port ${configs.port}`);
+process.on('exit', () => {
+	console.error('Process Ended !');
 });
