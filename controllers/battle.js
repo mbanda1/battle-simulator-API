@@ -7,35 +7,52 @@ const addOne = (req, res, next) => {
 	const { body } = req;
 	const instance = new AddService('battles');
 
-
-	instance.addToDatabase(body)
-	  .then(() => {
-	    res.status(201).json({
-	      success,
-	    });
-	  })
-	  .catch((error) => {
-	    next(error);
-	  });
+	instance
+		.addToDatabase(body)
+		.then(() => {
+			res.status(201).json({
+				success,
+			});
+		})
+		.catch((error) => {
+			next(error);
+		});
 };
 
 const getMany = (req, res, next) => {
- 	const instance = new BattleService();
+	const instance = new BattleService();
 
-	instance.getBattles()
-	  .then((data) => {
-	    res.status(201).json({
-	      success,
-		  data,
-	    });
-	  })
-	  .catch((error) => {
-	    next(error);
-	  });
+	instance
+		.getBattles()
+		.then((data) => {
+			res.status(201).json({
+				success,
+				data,
+			});
+		})
+		.catch((error) => {
+			next(error);
+		});
 };
 
+const game = (req, res, next) => {
+	const instance = new BattleService();
+
+	instance
+		.initiateGame()
+		.then((data) => {
+			res.status(201).json({
+				success,
+				data,
+			});
+		})
+		.catch((error) => {
+			next(error);
+		});
+};
 
 module.exports = {
 	addOne,
 	getMany,
+	game,
 };
