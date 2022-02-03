@@ -30,7 +30,9 @@
     "db-migrate-pg": "^1.2.2",
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "socket.io": "^4.4.1",
+    "winston": "^3.5.1"
   },
   "devDependencies": {
     "eslint": "^8.8.0",
