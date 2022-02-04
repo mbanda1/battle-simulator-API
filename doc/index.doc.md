@@ -1,27 +1,23 @@
 @catCoder
- 
+
 **Base endpoints BATTLE**
 
- 
-  a) [Add Battle](#Add-Battle)
-  
-  b) [Get Battles](#Get-Battles)
+a) [Add Battle](#Add-Battle)
 
-  c) [Add Army](#Add-Army)
+b) [Get Battles](#Get-Battles)
 
-  d) [Add Attack strategy](#Add-Attack-strategy)
+c) [Add Army](#Add-Army)
 
-  e) [Get Eligible Games](#Get-Eligible-Games)
+d) [Add Attack strategy](#Add-Attack-strategy)
 
-  f) [Fire up a Game](#Fire-up-a-Game)
-  
-  g) [Get Played results](#Get-Played-results)
+e) [Get Eligible Games](#Get-Eligible-Games)
 
+f) [Get Played results](#Get-Played-results)
 
 ### Add Battle
 
-| Endpoint                | Method | Description             |
-| ----------------------- | ------ | ----------------------- |
+| Endpoint         | Method | Description      |
+| ---------------- | ------ | ---------------- |
 | /battles/add-one | POST   | Add a new Battle |
 
 ```javascript
@@ -40,14 +36,14 @@
 
 ### Get Battles
 
-| Endpoint                | Method | Description             |
-| ----------------------- | ------ | ----------------------- |
-| /battles/get-many | GET   | Gew Battles |
+| Endpoint          | Method | Description |
+| ----------------- | ------ | ----------- |
+| /battles/get-many | GET    | Gew Battles |
 
 ```javascript
 
 // Request main.domain.com/battles/get-many
- 
+
 // Response Status Code: 200
 {
     "success": true,
@@ -66,11 +62,10 @@
 
 ```
 
-
 ### Add Army
 
-| Endpoint                | Method | Description             |
-| ----------------------- | ------ | ----------------------- |
+| Endpoint        | Method | Description    |
+| --------------- | ------ | -------------- |
 | /armies/add-one | POST   | Add a new Army |
 
 ```javascript
@@ -92,8 +87,8 @@
 
 ### Add Attack strategy
 
-| Endpoint                | Method | Description             |
-| ----------------------- | ------ | ----------------------- |
+| Endpoint                 | Method | Description               |
+| ------------------------ | ------ | ------------------------- |
 | /attack-strategy/add-one | POST   | Add a new Attack strategy |
 
 ```javascript
@@ -112,9 +107,9 @@
 
 ### Get Eligible Games
 
-| Endpoint                | Method | Description             |
-| ----------------------- | ------ | ----------------------- |
-| /games/get-legit | GET   | Get games with 3 armies and above |
+| Endpoint         | Method | Description                       |
+| ---------------- | ------ | --------------------------------- |
+| /games/get-legit | GET    | Get games with 3 armies and above |
 
 ```javascript
 
@@ -165,28 +160,11 @@
 
 ```
 
-### Fire up a Game
-
-| Endpoint                | Method | Description             |
-| ----------------------- | ------ | ----------------------- |
-| /games/start-game | POST   | Lauch a game with all elligble armies |
-
-```javascript
-
-// Request main.domain.com/games/start-game
-
-// Response Status Code: 200
-{
-    "success": true,
-    "data": "Check Logs / Database for  final results status"
-}
-```
-
 ### Get Game results
 
-| Endpoint                | Method | Description             |
-| ----------------------- | ------ | ----------------------- |
-| /games/played-games | GET   | Get Played games |
+| Endpoint            | Method | Description                                                       |
+| ------------------- | ------ | ----------------------------------------------------------------- |
+| /games/played-games | GET    | Get Played games - For current Game, results are served on socket |
 
 ```javascript
 
