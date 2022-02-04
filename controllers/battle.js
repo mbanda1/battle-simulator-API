@@ -35,24 +35,7 @@ const getMany = (req, res, next) => {
 		});
 };
 
-const game = (req, res, next) => {
-	const instance = new BattleService();
-
-	instance
-		.initiateGame()
-		.then((data) => {
-			res.status(201).json({
-				success,
-				data,
-			});
-		})
-		.catch((error) => {
-			next(error);
-		});
-};
-
 module.exports = {
 	addOne,
 	getMany,
-	game,
 };
